@@ -26,28 +26,22 @@ Logout
               @endif
               {!! Form::model($dokter, ['method' => 'PATCH','route' => ['dokters.update', $dokter->number]]) !!}
           <div class="row">
-              <div class="col-xs-12 col-sm-12 col-md-12">
-                  <div class="form-group">
-                      <strong>number:</strong>
-                        {!! Form::text('number', null, array('placeholder' => 'number','class' => 'form-control')) !!}
-                  </div>
-                </div>
           <div class="col-xs-12 col-sm-12 col-md-12">
               <div class="form-group">
                   <strong>date:</strong>
-                  {!! Form::text('date', null, array('placeholder' => 'date','class' => 'form-control')) !!}
+                  {!! Form::text('date', null, array('placeholder' => 'Date','class' => 'form-control')) !!}
                 </div>
             </div>
           <div class="col-xs-12 col-sm-12 col-md-12">
               <div class="form-group">
                 <strong>nama:</strong>
-                {!! Form::text('nama', null, array('placeholder' => 'nama','class' => 'formcontrol'))!!}
+                {!! Form::text('nama', null, array('placeholder' => 'Nama','class' => 'formcontrol'))!!}
               </div>
             </div>
           <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
               <strong>bagian:</strong>
-                {!! Form::text('bagian', array('placeholder' => 'bagian','class' => 'formcontrol'))!!}
+                {!! Form::text('bagian', array('placeholder' => 'Bagian','class' => 'formcontrol'))!!}
             </div>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-12 text-center">

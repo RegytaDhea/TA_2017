@@ -80,6 +80,7 @@
                                                     <th>Date</th>
                                                     <th>Nama</th>
                                                     <th>Bagian</th>
+                                                    <th>Delete</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -89,11 +90,15 @@
                                                     <td>{{$dokter->date}}</td>
                                                     <td>{{$dokter->nama}}</td>
                                                     <td>{{$dokter->bagian}}</td>
+                                                    <td>{!! Form::open(['method' => 'DELETE','route' => ['dokters.destroy', $dokter->number],'style'=>'display:inline']) !!}
+                                                      {!! Form::submit('Delete', ['class' => 'btn btndanger'])!!}
+                                                      {!! Form::close() !!}</td>
                                                 </tr>
                                               @endforeach
-
                                             </tbody>
                                         </table>
+
+                                        <a class="btn btn-info" href="{{ route('dokters.create',$dokter->number) }}">Create</a>
                                     </div>
 
                                 </div>
@@ -136,6 +141,7 @@
         <!-- end page-wrapper -->
 
     </div>
+
     <!-- end wrapper -->
 
     <!-- Core Scripts - Include with every page -->
